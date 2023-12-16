@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Изучение JS</title>
+</head>
+<body>
+    <script>
+        // комментарий в одну строку
+
+        /*
+        комментаний в
+        несколько строк
+        */
+
+        var num1 = 77;
+        var num2 = 777;
+        var num3 = true;
+        console.log(num1)
+        console.log(num2, num3)
+        document.write("Конкатенация: " + num1 + num2 + "<br>");
+        document.write("Сложение: ", num1 + num2 + "<br>");
+
+        var colors = ["Red", "Blue", "Yellow", "Green"]
+        document.write(colors[0], "<br>")
+        document.write(colors[3], "<br>")
+        document.write(colors[4], "<br>")
+        document.write([colors[1], colors[2]], "<br>")
+        colors[4] = "White"
+        document.write(colors[4], "<br>")
+        error = 2 / 0
+        document.write(error, "<br>")
+        colors.push ("Black")
+        document.write(colors[5], "<br>")
+
+        for (var i = 0; i < 5; i++) {
+            document.write(i, "<br>")
+        }
+
+        for (var i = 100; i > 50; i -= 5) {
+            document.write(i, "<br>")
+        }
+
+        var j = 100;
+        while (j > 10) {
+            document.write(j, "<br>")
+            j /=2
+        }
+
+        for (var i = 0; i < colors.length; i++) {
+            document.write(colors[i], "<br>")
+        }
+
+        if (num1 > num2) {
+            document.write(num1 + " > " + num2, "<br>")
+        } else if (num1 < num2) {
+            document.write(num1 + " < " + num2, "<br>")
+        } else {
+            document.write(num1 + " = " + num2, "<br>")
+        }
+
+        if (num3) {
+            document.write(num3 + " = true", "<br>")
+        }
+
+        var res = 4;
+        switch (res) {
+            case 1:
+            document.write ("res is 1");
+                break;
+            
+            case 2:
+            document.write ("res is 2");
+                break;
+            
+            case 3:
+            document.write ("res is 3");
+                break;
+            default:
+            document.write ("res is unknown");
+                break;
+        }
+        document.write ("<br>");
+
+        function test (word) {
+            document.write (word)
+        }
+
+        test ("HAYOLA !")
+
+        document.write ("<br>");
+
+        test ("NIHAYOLA !")
+
+        document.write ("<br>");
+
+        function sum (a,b) {
+            return a + b
+        }
+
+        document.write (sum(7,9));
+        document.write ("<br>");
+        document.write (sum(-7,9));
+        document.write ("<br>");
+
+        /*
+        var person = {
+            firstname: "Piter",
+            age: 27,
+            childrens: ["Slava", "Egor", "Sveta"],
+            adress: {
+                city: "Khabarovsk",
+                street: Dejneva_per,
+                house: 17,
+                room: 50,
+            },
+            Nameage: function () {
+                return this.firstname + " age is " + this.age;
+            }
+        }
+
+
+        document.write (person.Nameage());
+        */
+        document.write ("<br>");
+        document.write (sum(17,-9));
+
+        // var name = prompt ("Как тебя зовут?")
+        // console.log("Твоё имя " + name)
+    </script>
+</body>
+</html>

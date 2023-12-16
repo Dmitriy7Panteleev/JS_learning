@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Изучение JS - oбъекты</title>
+</head>
+<body>
+    <script> 
+        var persona = {
+            firstname: "Dima",
+            age: 27,
+            childrens: ["Slava", "Egor", "Sveta"],
+            adress: {
+                city: "Khabarovsk",
+                street: "Dejneva_per",
+                house: 17,
+                room: 50,
+            },
+            Nameage: function () {
+                return this.firstname + " age is " + this.age;
+            },
+            Nameadress: function () {
+                return this.firstname + " living in " + this.adress.city + " street " + this.adress.street + " " + this.adress.house + "-" + this.adress.room;
+            }
+        }
+
+        document.write (persona.Nameage());
+        document.write ("<br>");
+
+        document.write (persona.Nameadress());
+        document.write ("<br>");
+        
+        function Person (name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+
+            this.get_name = function () {
+                return this.name;
+            }
+            this.get_age = function () {
+                return this.age;
+            }
+            this.get_male = function () {
+                return this.sex;
+            }
+
+        }
+        
+        var Nikita = new Person ("Nikita", 33, "male");
+        var Sveta = new Person ("Sveta", 37, "female");
+        console.log (Nikita)
+
+        document.write (Nikita.get_name(), Nikita.get_age(), Nikita.get_male());
+        document.write ("<br>");
+
+        document.write (Sveta.get_name(), Sveta.get_age(), Sveta.get_male());
+        document.write ("<br>");
+
+    </script>
+</body>
+</html>

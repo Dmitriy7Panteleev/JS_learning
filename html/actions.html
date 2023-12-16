@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Изучение JS - события</title>
+</head>
+<body>
+    <p id="text1">Тут какой-то текст</p>
+    <p id="text2">Тут какой-то текст ещё</p>
+    
+    <button onclick="changeсolor('yellow');">Жёлтый</button>
+    <button onclick="changeсolor('green');">Зелёный</button>
+    <button onclick="changeсolor('red');">Красный</button>
+    <br>
+    <br>
+    <button onclick="changeсolor('black');">Чёрный</button>
+    <br>
+    <br>
+    <button onclick="changeсolor('white');">Не видно</button>
+    <br>
+    <form name="form1" action="" onsubmit="validateform()" method="post">
+        Введите имя: <input type="text" name="form1_name">
+        <input type="submit" value="подтвердить">
+    
+    </form>
+
+    <script> 
+    function changeсolor (color) {
+        var element1 = document.getElementById('text1')
+        element1.style.color = color
+        var element2 = document.getElementById('text2')
+        element2.style.color = color
+    }
+    function validateform() {
+        var element = document.forms["form1"]["form1_name"].value;
+        if (element == "") {
+            alert ("введите имя!");
+            return false;
+        }
+    }
+    </script>
+</body>
+</html>
